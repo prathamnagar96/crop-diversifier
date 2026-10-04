@@ -1,0 +1,11 @@
+# Optional: one-click public hosting on Render.com (free plan). Not needed for Codespaces.
+services:
+  - type: web
+    name: krishikavach
+    runtime: python
+    plan: free
+    buildCommand: "echo no build needed"
+    startCommand: "python server.py"
+    envVars:
+      - key: HOST
+        value: 0.0.0.0

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f6f43">
+  <title>KrishiKavach</title>
+  <meta name="description" content="Simple crop advice for farmers in El Niño-prone Vidarbha">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4l22 8v16c0 15-9 26-22 32C19 54 10 43 10 28V12z' fill='%231f6f43'/%3E%3Cpath d='M32 46c-8-6-10-14-6-22 6 2 9 8 6 22zm0 0c8-6 10-14 6-22-6 2-9 8-6 22z' fill='%23a8e063'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="app" id="phone">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="KrishiKavach home">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 4l22 8v16c0 15-9 26-22 32C19 54 10 43 10 28V12z" fill="var(--green)"/>
+          <path d="M32 46c-8-6-10-14-6-22 6 2 9 8 6 22zm0 0c8-6 10-14 6-22-6 2-9 8-6 22z" fill="#a8e063"/>
+        </svg>
+        <span data-t="app">कृषीकवच</span>
+      </a>
+      <nav class="navlinks" aria-label="Main">
+        <a href="#home" data-tab="home">🏠 <span data-t="nav_home"></span></a>
+        <a href="#results" data-tab="results">🌱 <span data-t="nav_crops"></span></a>
+        <a href="#harvest" data-tab="harvest">🧺 <span data-t="nav_harvest"></span></a>
+        <a href="#chat" data-tab="chat">💬 <span data-t="nav_chat"></span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="mr">मराठी</button>
+        <button data-lang="hi">हिंदी</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <main id="view" class="view" aria-live="polite"></main>
+    <footer class="site-foot">
+      <span>🌱 <b data-t="app"></b> · <span data-t="tagline"></span></span>
+      <span><a href="tel:18001801551">📞 Kisan 1800-180-1551</a> · <a href="#" id="footCredits" data-t="credits"></a></span>
+    </footer>
+
+    <button class="fab" id="fab" aria-label="Krishi Mitra chat">
+      <span class="fab-ring"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="12" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/></svg>
+    </button>
+
+    <nav class="tabbar" id="tabbar">
+      <a href="#home" data-tab="home"><span class="ti">🏠</span><span data-t="nav_home"></span></a>
+      <a href="#results" data-tab="results"><span class="ti">🌱</span><span data-t="nav_crops"></span></a>
+      <a href="#harvest" data-tab="harvest"><span class="ti">🧺</span><span data-t="nav_harvest"></span></a>
+      <a href="#chat" data-tab="chat"><span class="ti">💬</span><span data-t="nav_chat"></span></a>
+    </nav>
+
+    <!-- Chat sheet -->
+    <section class="chat" id="chat" aria-hidden="true">
+      <div class="chat-head">
+        <div class="chat-avatar">🧑‍🌾</div>
+        <div class="chat-title">
+          <b data-t="chat_title"></b>
+          <span class="chat-mode" id="chatMode"></span>
+        </div>
+        <button class="icon-btn" id="chatClose" aria-label="Close">✕</button>
+      </div>
+      <div class="chat-log" id="chatLog"></div>
+      <div class="chat-chips" id="chatChips"></div>
+      <form class="chat-input" id="chatForm" autocomplete="off">
+        <button type="button" class="mic" id="micBtn" aria-label="Speak">🎤</button>
+        <input id="chatText" type="text" maxlength="400">
+        <button type="submit" class="send" aria-label="Send">➤</button>
+      </form>
+    </section>
+  </div>
+
+  <div class="credits-modal" id="credits" aria-hidden="true">
+    <div class="credits-card">
+      <h3 data-t="credits"></h3>
+      <ul id="creditsList"></ul>
+      <button class="btn small" id="creditsClose">OK</button>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="images.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

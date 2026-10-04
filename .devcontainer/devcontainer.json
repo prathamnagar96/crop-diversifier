@@ -1,0 +1,10 @@
+{
+  "name": "KrishiKavach",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "containerEnv": { "HOST": "0.0.0.0", "PORT": "8000" },
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "KrishiKavach app", "onAutoForward": "openBrowser" }
+  },
+  "postAttachCommand": "python server.py"
+}
