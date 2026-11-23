@@ -1,0 +1,16 @@
+numpy>=1.24.0,<2.3.0
+pandas>=2.0.0,<3.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+xgboost>=1.7.0
+lightgbm>=4.0.0
+catboost>=1.2.0
+shap>=0.42.0
+joblib>=1.3.0
+pyarrow>=12.0.0
+shapely>=2.0.0
+rasterio>=1.3.0
+access-parser
+matplotlib>=3.7.0
+streamlit>=1.25.0
+pytest>=7.4.0
